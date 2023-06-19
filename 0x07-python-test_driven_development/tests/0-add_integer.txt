@@ -1,0 +1,27 @@
+# Test case 1: Integer addition
+>>> add_integer(1, 2)
+3
+
+# Test case 2: Negative integer addition
+>>> add_integer(100, -2)
+98
+
+# Test case 3: Missing second argument (default to 98)
+>>> add_integer(2)
+100
+
+# Test case 4: Float addition
+>>> add_integer(100.3, -2)
+98
+
+#Test case 5: Invalid type for second argument
+>>> add_integer(4, "School")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer or float
+
+#Test case 6: Invalid type for first argument
+>>> add_integer(None)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer or float

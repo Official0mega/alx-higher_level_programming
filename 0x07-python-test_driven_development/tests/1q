@@ -1,0 +1,94 @@
+#!/usr/bin/python3
+""" max_integer function
+"""
+import importlib
+import unittest
+from importlib import import_module
+
+
+class MaxIntegerTestCase(unittest, TestCase):
+    '''
+    File_name: 6-max_integer_test.py
+    Created: 1st of June, 2023
+    Auth: David James Taiye (Official0mega)
+    Size: undefined
+    Project: 0x07-python-test_driven_development
+    Status: submitted.
+    '''
+
+    def test_positive_numbers(self):
+        """
+        # Since the beginning you have been creating “Interactive tests”....
+        # For this exercise, you will add Unittests.
+        # All tests you make must be passable by the function below...
+        # VARIABLE(" "):
+        # Max_integer(List): Max integer - Unittest
+        # Return: Always 0. (Success).
+        """
+        """Adds two integers.
+
+        Args:
+        a (int or float): The first number
+        b (int or float, optional): The second number. Defaults to 98.
+
+        Return:
+            int: The addition of a and b.
+
+        Raises:
+            TypeError: if a or b is not an integer or float.
+            """
+        self.assertEqual(max_integer([1, 2, 3, 4, 5]), 5)
+        self.assertEqual(max_integer([10, 20, 30, 40, 50]), 50)
+        self.assertEqual(max_integer([100, 200, 300, 400, 500]), 500)
+
+
+def test_negative_numbers(self):
+    """
+    testing negative numbers
+    """
+    self.assertEqual(max_integer([-1, -2, -3, -4, -5]), -1)
+    self.assertEqual(max_integer([-10, -20, -30, -40, -50]), -10)
+    self.assertEqual(max_integer([-100, -200, -300, -400, -500]), -100)
+
+    def test_mixed_numbers(self):
+        """
+        testing mixed numbers
+        """
+        self.assertEqual(max_integer([-1, 2, -3, 4, -5]), 4)
+        self.assertEqual(max_integer([-10, 20, -30, 40, -50]), 40)
+        self.assertEqual(max_integer([100, -200, 300, -400, 500]), 500)
+
+
+    def test_empty_list(self):
+
+
+        self.assertIsNone(max_integer([]))
+
+
+    def test_single_element(self):
+
+
+        self.assertEqual(max_integer([10]), 10)
+        self.assertEqual(max_integer([-5]), -5)
+
+    def test_duplicate_numbers(self):
+
+
+        self.assertEqual(max_integer([1, 1, 1, 1]), 1)
+        self.assertEqual(max_integer([-10, -10, -10, -10]), -10)
+        self.assertEqual(max_integer([5, 5, 2, 5]), 5)
+
+
+    def test_invalid_input(self):
+
+
+        with self.assertRaises(TypeError):
+            max_integer("not a list")
+        with self.assertRaises(TypeError):
+            max_integer([1, 2, "3", 4, 5])
+        with self.assertRaises(TypeError):
+            max_integer(None)
+
+
+if __name__ == '__main__':
+    unittest.main()
